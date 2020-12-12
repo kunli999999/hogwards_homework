@@ -11,6 +11,10 @@ class TestCalc:
         print("开始计算")
     def teardown_class(self):
         print("计算结束")
+    def setup_method(self):
+        print("开始运算")
+    def teardown_method(self):
+        print("结束运算")
     @pytest.mark.parametrize("a,b,expect",[
         (1,2,3),(-1,-2,-3),(10,20,30)
     ],ids=["addone","addtwo","addthree"])
